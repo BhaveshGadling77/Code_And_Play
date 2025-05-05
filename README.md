@@ -26,12 +26,15 @@ A landing page (`Main_Page/index.html`) acts as the homepage, linking to all gam
 
 ## 🧭 How to View / Use the Project
 For Linux
+Clone the Repository.
 ```sh
 git clone "https://github.com/BhaveshGadling77/Code_And_Play"
 ```
+change the directory to Project Directory.
 ```sh
 cd Code&Play/Main_Page
 ```
+Open Main File.
 ```sh
 open index.html
 ```
