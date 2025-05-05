@@ -28,7 +28,11 @@ A landing page (`Main_Page/index.html`) acts as the homepage, linking to all gam
 For Linux
 ```sh
 git clone "https://github.com/BhaveshGadling77/Code_And_Play"
+```
+```sh
 cd Code&Play/Main_Page
+```
+```sh
 open index.html
 ```
 ## 🧩 Tools & Technologies Used
