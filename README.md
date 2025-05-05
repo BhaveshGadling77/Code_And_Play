@@ -1,5 +1,4 @@
 
-# 📌 Project Title
 # 🎯Code&Play
  A collection of interactive web-based mini-games built with HTML, CSS, and JavaScript.
 
