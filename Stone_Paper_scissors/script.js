@@ -7,6 +7,7 @@ const userScoreTracker = document.querySelector('#user')
 const resetbtn = document.querySelector('#reset-btn')
 let userChoice, computerChoice;
 let gameChoice = ['Rock', 'Paper', 'Scissors']
+//checking if the button is clicked
 choices.forEach(function(choice) {
     console.log(choice)
     choice.addEventListener( 'click' ,function() {
@@ -15,7 +16,7 @@ choices.forEach(function(choice) {
        countChoice(choiceId)
     })
 })
-
+//converting the choice into number
 function countChoice(choiceId) {
     if(choiceId == 'rock')
         userChoice = 0;
@@ -26,12 +27,13 @@ function countChoice(choiceId) {
     // console.log(userChoice)
     computerMove(userChoice);    
 }
-
+//generate a computers move
 function computerMove(userChoice) {
     computerChoice = Math.floor(Math.random() * 3)
     // console.log(computerChoice)
     playGame(userChoice, computerChoice)
 }
+//show winner
 function showWinner(userWin) {
     if(userWin) {
         // console.log("You won!")
@@ -49,12 +51,13 @@ function showWinner(userWin) {
     }
 
 }
-
+//check if the game is draw
 function drawGame() {
     msg.innerText = "Game was draw. Play again"
     msg.style.backgroundColor = "orange"
     // console.log("Game was draw")
 }
+//playgame compares the choice
 function playGame(userChoice, computerChoice) {
     if (userChoice == computerChoice){
         drawGame()
@@ -75,6 +78,7 @@ function playGame(userChoice, computerChoice) {
         showWinner(userWin);
     }
 }
+//reset game resets the whole game
 function resetGame () {
     userScore = 0;
     compScore = 0;

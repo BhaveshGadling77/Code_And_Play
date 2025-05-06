@@ -22,15 +22,15 @@ boxes.forEach((box) => {
   box.addEventListener('click', () => {
     console.log('box is clicked')
     if (turn0) {
+      box.style.color = 'white'
       playerTurn.innerText = `Player X Turn`
-      box.style.color = 'blue'
       box.innerHTML = 'O'
 
       turn0 = false
     } else {
       turn0 = true;
+      box.style.color = 'red'
       playerTurn.innerText = `Player O Turn`
-      box.style.color = 'black'
       box.innerHTML = 'X'
       
     }
@@ -61,7 +61,7 @@ const checkwinner = function () {
     checkDraw();
   }
 }
-
+//check if the draw is happened
 function checkDraw() {
   let filled = true;
 
@@ -77,20 +77,20 @@ function checkDraw() {
     msgContainer.classList.remove('hide');
   }
 }
-
+//show winner
 function showWinner(winner) {
   msg.innerText = `Congrats Winner is player ${winner}!`
   msgContainer.classList.remove('hide');
   playerTurn.classList.add('hide')
   disableBoxes();
 }
-
+//after declaring boxes should be disabled so that the winner shouldn't change
 function disableBoxes() {
   for (let box of boxes) {
     box.disabled = true
   }
 }
-
+//enable boxes after clicking on reset or start
 function enableBoxes() {
   for (let box of boxes) {
     box.disabled = false

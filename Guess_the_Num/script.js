@@ -11,7 +11,6 @@ const p = document.createElement('p');
 
 let prevGuess = [];
 let numGuess = 1;
-
 let playGame = true;
 
 if (playGame) {
@@ -22,7 +21,7 @@ if (playGame) {
     validateGuess(guess);
   });
 }
-
+//if the input is not a number or greater than range or less than range
 function validateGuess(guess) {
   if (isNaN(guess)) {
     alert('PLease enter a valid number');
@@ -42,7 +41,7 @@ function validateGuess(guess) {
     }
   }
 }
-
+//checking the guess
 function checkGuess(guess) {
   if (guess === randomNumber) {
     displayMessage(`You guessed it right`);
@@ -53,18 +52,18 @@ function checkGuess(guess) {
     displayMessage(`Number is TOOO High`);
   }
 }
-
+//displays all guesses 
 function displayGuess(guess) {
   userInput.value = '';
   guessSlot.innerHTML += `${guess}, `;
   numGuess++;
   remaining.innerHTML = `${11 - numGuess} `;
 }
-
+//display msg
 function displayMessage(message) {
   lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
-//seti
+//end game when winner is decided
 function endGame() {
   userInput.value = ''
   userInput.setAttribute('disabled', '')
