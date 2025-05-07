@@ -22,14 +22,14 @@ boxes.forEach((box) => {
   box.addEventListener('click', () => {
     console.log('box is clicked')
     if (turn0) {
-      box.style.color = 'white'
+      box.style.color = 'blue'
       playerTurn.innerText = `Player X Turn`
       box.innerHTML = 'O'
 
       turn0 = false
     } else {
       turn0 = true;
-      box.style.color = 'red'
+      box.style.color = 'black'
       playerTurn.innerText = `Player O Turn`
       box.innerHTML = 'X'
       
